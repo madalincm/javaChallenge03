@@ -80,6 +80,9 @@ public class Organization {
         }
     }
 
+    public void removeEmployee(Employee employee){
+        this.employeesList.remove(this.employeesList.indexOf(employee));
+    }
     public void removeById(String id){
         List<Employee> filtered = this.employeesList.stream().filter(x -> (!x.id.equals(id))).collect(Collectors.toList());
         if(filtered.size() == 0){

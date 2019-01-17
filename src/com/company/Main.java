@@ -29,16 +29,22 @@ public class Main {
 //        organization.removeByName("Madalin");
 //        organization.displayEmployeesList();
 
-        organization.editName(employee3, "Ratatata");
+//        organization.editName(employee3, "Ratatata");
+//        organization.displayEmployeesList();
+//
+//        organization.editAge(employee3, 31);
+//        organization.displayEmployeesList();
+//
+//        organization.editGender(employee3, "Male");
+//        organization.displayEmployeesList();
+//
+//        organization.editDepartment(employee3, "IT");
+//        organization.displayEmployeesList();
+
+        organization.removeEmployee(employee3);
         organization.displayEmployeesList();
 
-        organization.editAge(employee3, 31);
-        organization.displayEmployeesList();
-
-        organization.editGender(employee3, "Male");
-        organization.displayEmployeesList();
-
-        organization.editGender(employee3, "IT");
+        organization.removeAllEmployees();
         organization.displayEmployeesList();
     }
 
