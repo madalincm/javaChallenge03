@@ -9,11 +9,13 @@ public class Main {
         Employee employee1 = new Employee("Madalin", 27, "Male", "QA");
         Employee employee2 = new Employee("Madalin", 29, "Male", "DEVOPS");
         Employee employee3 = new Employee("Catalina", 28, "Female", "WEB");
+        Employee employee4 = new Employee("Nelu", 69, "Female", "QA");
 
         Organization organization = new Organization();
         organization.addNewEmployee(employee1);
         organization.addNewEmployee(employee2);
         organization.addNewEmployee(employee3);
+        organization.addNewEmployee(employee4);
 
 
 //        organization.searchByName("Catalina");
@@ -24,10 +26,10 @@ public class Main {
 //        organization.removeById(employee1.id);
 //        organization.displayEmployeesList();
 
-//        organization.removeByName("Madalin");
-//        organization.displayEmployeesList();
-
-        organization.editName(employee3, "Ratatata");
+        organization.removeByName("Madalin");
         organization.displayEmployeesList();
+
+//        organization.editName(employee3, "Ratatata");
+//        organization.displayEmployeesList();
     }
 }

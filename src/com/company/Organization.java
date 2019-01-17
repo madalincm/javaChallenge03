@@ -27,7 +27,7 @@ public class Organization {
     }
 
     public void searchByName(String name){
-        List<Employee> filtered = this.employeesList.stream().filter(x -> x.name == name).collect(Collectors.toList());
+        List<Employee> filtered = this.employeesList.stream().filter(x -> x.name.equals(name)).collect(Collectors.toList());
         if(filtered.size() == 0){
             System.out.println("We could not find any employees with that name");
         } else {
@@ -41,7 +41,7 @@ public class Organization {
     }
 
     public void searchByGender(String gender){
-        List<Employee> filtered = this.employeesList.stream().filter(x -> x.gender == gender).collect(Collectors.toList());
+        List<Employee> filtered = this.employeesList.stream().filter(x -> x.gender.equals(gender)).collect(Collectors.toList());
         if(filtered.size() == 0){
             System.out.println("We could not find any employees with that gender");
         } else {
@@ -55,7 +55,7 @@ public class Organization {
 
 
     public void searchByDepartment(String department){
-        List<Employee> filtered = this.employeesList.stream().filter(x -> x.department == department).collect(Collectors.toList());
+        List<Employee> filtered = this.employeesList.stream().filter(x -> x.department.equals(department)).collect(Collectors.toList());
         if(filtered.size() == 0){
             System.out.println("We could not find any employees in that department");
         } else {
@@ -81,7 +81,7 @@ public class Organization {
     }
 
     public void removeById(String id){
-        List<Employee> filtered = this.employeesList.stream().filter(x -> x.id != id).collect(Collectors.toList());
+        List<Employee> filtered = this.employeesList.stream().filter(x -> (!x.id.equals(id))).collect(Collectors.toList());
         if(filtered.size() == 0){
             System.out.println("This id is not matching any employee");
         } else {
@@ -91,7 +91,7 @@ public class Organization {
     }
 
     public void removeByName(String name){
-        List<Employee> filtered = this.employeesList.stream().filter(x -> x.name != name).collect(Collectors.toList());
+        List<Employee> filtered = this.employeesList.stream().filter(x -> (!x.name.equals(name))).collect(Collectors.toList());
         if(filtered.size() == 0){
             System.out.println("We could not find any employees with that name");
         } else {
