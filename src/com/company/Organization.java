@@ -104,6 +104,17 @@ public class Organization {
         this.employeesList.get(this.employeesList.indexOf(employee)).name = name;
     }
 
+    public void editAge(Employee employee, int age){
+        this.employeesList.get(this.employeesList.indexOf(employee)).age = age;
+    }
+
+    public void editGender(Employee employee, String gender){
+        this.employeesList.get(this.employeesList.indexOf(employee)).gender = gender;
+    }
+
+    public void editDepartment(Employee employee, String department){
+        this.employeesList.get(this.employeesList.indexOf(employee)).department = department;
+    }
 
     public void displayEmployeesList(){
         if(this.employeesList.size() == 0) {

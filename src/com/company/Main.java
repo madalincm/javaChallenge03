@@ -26,10 +26,20 @@ public class Main {
 //        organization.removeById(employee1.id);
 //        organization.displayEmployeesList();
 
-        organization.removeByName("Madalin");
+//        organization.removeByName("Madalin");
+//        organization.displayEmployeesList();
+
+        organization.editName(employee3, "Ratatata");
         organization.displayEmployeesList();
 
-//        organization.editName(employee3, "Ratatata");
-//        organization.displayEmployeesList();
+        organization.editAge(employee3, 31);
+        organization.displayEmployeesList();
+
+        organization.editGender(employee3, "Male");
+        organization.displayEmployeesList();
+
+        organization.editGender(employee3, "IT");
+        organization.displayEmployeesList();
     }
+
 }
