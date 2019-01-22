@@ -40,7 +40,7 @@ public class Organization {
 
     }
 
-    public void searchByGender(int gender){
+    public void searchByGender(Gender gender){
         List<Employee> filtered = this.employeesList.stream().filter(x -> x.gender == gender).collect(Collectors.toList());
         if(filtered.size() == 0){
             System.out.println("We could not find any employees with that gender");
@@ -111,7 +111,7 @@ public class Organization {
         this.employeesList.get(this.employeesList.indexOf(employee)).age = age;
     }
 
-    public void editGender(Employee employee, int gender){
+    public void editGender(Employee employee, Gender gender){
         this.employeesList.get(this.employeesList.indexOf(employee)).gender = gender;
     }
 
