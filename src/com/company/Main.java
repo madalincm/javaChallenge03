@@ -6,10 +6,12 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        Employee employee1 = new Employee("Madalin", 27, "Male", "QA");
-        Employee employee2 = new Employee("Madalin", 29, "Male", "DEVOPS");
-        Employee employee3 = new Employee("Catalina", 28, "Female", "WEB");
-        Employee employee4 = new Employee("Nelu", 69, "Female", "QA");
+        Employee employee1 = new Employee("Madalin", 27, 0, "QA");
+        Employee employee2 = new Employee("Madalin", 29, 1, "DEVOPS");
+        Employee employee3 = new Employee("Catalina", 28, 2, "WEB");
+        Employee employee4 = new Employee("Nelu", 69, 20, "QA");
+
+//        employee4.displayEmployee();
 
         Organization organization = new Organization();
         organization.addNewEmployee(employee1);
@@ -19,7 +21,7 @@ public class Main {
 
 
 //        organization.searchByName("Catalina");
-//        organization.searchByGender("Male");
+//        organization.searchByGender(2);
 //        organization.searchByDepartment("QA");
 //        organization.searchByAge(27);
 
@@ -35,17 +37,17 @@ public class Main {
 //        organization.editAge(employee3, 31);
 //        organization.displayEmployeesList();
 //
-//        organization.editGender(employee3, "Male");
-//        organization.displayEmployeesList();
+        organization.editGender(employee3, 0);
+        organization.displayEmployeesList();
 //
 //        organization.editDepartment(employee3, "IT");
 //        organization.displayEmployeesList();
 
-        organization.removeEmployee(employee3);
-        organization.displayEmployeesList();
-
-        organization.removeAllEmployees();
-        organization.displayEmployeesList();
+//        organization.removeEmployee(employee3);
+//        organization.displayEmployeesList();
+//
+//        organization.removeAllEmployees();
+//        organization.displayEmployeesList();
     }
 
 }
